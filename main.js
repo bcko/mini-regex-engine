@@ -25,16 +25,14 @@ function buildLiteralMap(text, sep) {
     } else {
         literal += char;
     }
-
-    // special condition. end of the line might not end with separators.
+  }
+// special condition. end of the line might not end with separators.
     if (literalMap.has(literal)) {
       const count = literalMap.get(literal)
       literalMap.set(literal, count + 1) 
     } else {
       literalMap.set(literal, 1)
     }
-  }
-
   return literalMap
 }
 
